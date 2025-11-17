@@ -8,6 +8,7 @@ dataset = load_dataset("DamarJati/Face-Mask-Detection",split='train')
 
 # Step 1: Check if MPS is available and set the device
 device = torch.device("mps") if torch.backends.mps.is_built() else torch.device("cpu")
+# device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 print(f"Using device: {device}")
 
 # Step 3: Split the dataset into train and test sets
